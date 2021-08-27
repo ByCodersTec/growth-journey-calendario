@@ -1,10 +1,5 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  text-align: center;  
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,20 +8,67 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.App-header {  
+  background-image: url(../src/QuadroDegrade.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;  
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: white;  
+  position: fixed;  
 }
 
-.App-link {
-  color: #61dafb;
+.Entrar {
+  margin: 280px 0 0 -900px;     
 }
+
+.Cadastro {
+  margin: -35px 950px 0 0;
+  float: right;
+}
+
+.Login {
+  font-size: 15px;
+  margin: 108px 24px 0 -900px;
+}
+
+.Senha {
+  font-size: 15px;
+  margin: 40px 24px 0 -900px;
+}
+
+.Linha1 {
+  color: black;
+  margin: -25px 590px 0 0px;
+}
+
+.Linha2 {
+  color: black;
+  margin: -25px 590px 0 0px;
+}
+
+.Esqueceu {
+  font-size: 15px;
+  margin: 0px 340px 0 0px;
+}
+
+.Button {
+  border-radius: 10px;
+  background-color: black;
+  font-size: 18px;
+  color: white;
+  margin: 50px 900px 0 0px;
+}
+ .Image {
+   float: right;        
+   width: 250px;
+   margin:-295px 350px 0 650px;   
+  /* filter: invert(68%) sepia(42%) saturate(291%) hue-rotate(182deg) brightness(85%) contrast(86%); */
+  opacity: 0.6;  
+ }
 
 @keyframes App-logo-spin {
   from {
