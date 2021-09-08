@@ -1,0 +1,100 @@
+.cadastro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('img/blue1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.cadastro-right{
+    padding: 30px;
+    width: 600px;
+    height: 500px;
+    text-align: center;
+    align-items: center;
+    color: white;
+    border: 1px;
+    border-color: transparent;
+    border-radius: 70px;
+    box-shadow:  0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cadastro img{
+    width: 450px;
+    height: 450px;
+}
+
+.cadastro-right h1{
+    font-family: 'Roboto';
+    font-size: 50px;
+}
+
+.cadastro-nome, .cadastro-senha, .cadastro-email, .cadastro-telefone, .cadastro-cpf{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    width: 98%;
+    height: 50px;
+}
+
+.cadastro-nome svg, .cadastro-senha svg, .cadastro-email svg, .cadastro-telefone svg, .cadastro-cpf svg{
+    width: 30px;
+    height: 30px;
+}
+.cadastro-nome input, .cadastro-email input, .cadastro-telefone input, .cadastro-cpf input{
+    background: transparent;
+    width: 500px;
+    outline-width: 0;
+    font-size: 17px;
+    margin-left: 10px;
+    margin-right: 20px;
+    background:  transparent;
+    border: 1px solid;
+    border-color: black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color:white;
+}
+
+.cadastro-senha input {
+    background: transparent;
+    width: 470px;
+    outline-width: 0;
+    font-size: 17px;
+    margin-left: 10px;
+    margin-right: 20px;
+    background:  transparent;
+    border: 1px solid;
+    border-color: black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color:white;
+}
+
+.cadastro-salvar{
+    color: white;
+    font-size: 15px;
+    background: transparent;
+    height: 50px;
+    width: 300px;
+    border-color: transparent;
+    border-radius: 10px;
+    box-shadow:  0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 70px;
+}
+
+.cadastro-salvar:hover{
+    text-shadow: -1px 0px 12px rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+
+::placeholder{
+    color: white;
+}

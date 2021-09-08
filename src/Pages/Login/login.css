@@ -1,0 +1,126 @@
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('img/blue1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.login-right{
+    padding: 30px;
+    width: 600px;
+    height: 500px;
+    text-align: center;
+    align-items: center;
+    color: white;
+    border: 1px;
+    border-color: transparent;
+    border-radius: 70px;
+    box-shadow:  0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.login img{
+    width: 450px;
+    height: 450px;
+}
+
+.login-right h1{
+    font-family: 'Roboto';
+    font-size: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.login-right h4{
+    font-family: 'Roboto';
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 10;
+    color: white;
+}
+
+.login-nome, .login-senha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    width: 98%;
+    height: 50px;
+}
+
+.login-nome svg, .login-senha svg{
+    width: 30px;
+    height: 30px;
+}
+.login-nome input{
+    background: transparent;
+    width: 400px;
+    outline-width: 0;
+    font-size: 17px;
+    margin-left: 10px;
+    margin-right: 20px;
+    background:  transparent;
+    border: 1px solid;
+    border-color: black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color:white;
+}
+
+.login-senha input {
+    background: transparent;
+    width: 370px;
+    outline-width: 0;
+    font-size: 17px;
+    margin-left: 10px;
+    margin-right: 20px;
+    background:  transparent;
+    border: 1px solid;
+    border-color: black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color:white;
+}
+
+.login-entrar{
+    color: white;
+    font-size: 15px;
+    background: transparent;
+    height: 50px;
+    width: 300px;
+    border-color: transparent;
+    border-radius: 10px;
+    box-shadow:  0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 70px;
+}
+
+.login-cadastrese{
+    color: white;
+    font-size: 15px;
+    background: transparent;
+    height: 50px;
+    width: 300px;
+    border-color: transparent;
+    border-radius: 10px;
+    box-shadow:  0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.login-entrar:hover, .login-cadastrese:hover{
+    text-shadow: -1px 0px 12px rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+
+::placeholder{
+    color: white;
+}
+
+:Link{
+    text-decoration: none;
+}

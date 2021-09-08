@@ -1,0 +1,119 @@
+
+.agendamento{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('img/blue1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.agendamento-box{
+    padding: 30px;
+    width: 800px;
+    height: 500px;
+    display: flex;
+    text-align: center;
+    align-items: start;
+    color: white;
+    border: 1px;
+    border-color: transparent;
+    border-radius: 70px;
+    box-shadow:  0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.agendamento-left{
+    margin-left: 20px;
+    margin-bottom: 2px;
+    margin-right: 30px;
+    padding-right: 30px;
+    height: 475px;
+    border-right: 3px double;
+    border-color: rgba(0, 0, 0, 0.25);
+}
+
+.agendamento-left h1{
+    font-family: 'Roboto';
+}
+
+.agendamento-right{
+    text-align: start;
+}
+
+.agendamento-right h1, h4{
+    font-family: 'Roboto';
+}
+
+.agendamento-right input{
+    background: transparent;
+    width: 370px;
+    outline-width: 0;
+    font-size: 17px;
+    margin-left: 10px;
+    margin-right: 20px;
+    background:  transparent;
+    border: 1px solid;
+    border-color: black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color:white;
+}
+
+.agendamento-input1{
+    width: 600px;
+    height: 140px;
+}
+
+.agendamento-input2{
+    width: 600px;
+    height: 140px;
+}
+
+.agendamento-input3{
+    width: 600px;
+    height: 140px;
+}
+
+.logout{
+    color: white;
+    font-weight: 100;
+}
+
+.logout:hover{
+    text-shadow: -1px 0px 12px rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+.agendar{
+    position: relative;
+    top: 340px;
+    color: white;
+    font-size: 15px;
+    background: transparent;
+    height: 50px;
+    width: 100px;
+    border-color: transparent;
+    border-radius: 10px;
+    box-shadow:  0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.agendar:hover, .concluir:hover{
+    text-shadow: -1px 0px 12px rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+.concluir{
+    position: absolute;
+    right: 525px;
+    color: white;
+    font-size: 15px;
+    background: transparent;
+    height: 50px;
+    width: 120px;
+    border-color: transparent;
+    border-radius: 10px;
+    box-shadow:  0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
