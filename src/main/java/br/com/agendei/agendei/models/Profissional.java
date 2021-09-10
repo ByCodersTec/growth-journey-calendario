@@ -5,6 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.springframework.stereotype.Component;
+
 @Entity
 public class Profissional {
 	@Id
@@ -64,6 +66,7 @@ public class Profissional {
 		this.senha = senha;
 	}
 
+	
 	public Profissional(Long id, String nome, String cpf, String telefone, String email, String senha) {
 		this.id = id;
 		this.nome = nome;
