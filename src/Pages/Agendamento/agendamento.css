@@ -16,7 +16,7 @@
     height: 500px;
     display: flex;
     text-align: center;
-    align-items: start;
+    align-items: flex-start;
     color: white;
     border: 1px;
     border-color: transparent;

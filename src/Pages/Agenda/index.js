@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from 'react'
 import {Link} from 'react-router-dom';
 
 import './agenda.css';
@@ -18,9 +17,9 @@ function Agenda(){
                     </Link>
 
                     <Link to='/agendamento'>
-                    <button className="agendar">
-                        Agendar
-                    </button>
+                        <button className="agendar">
+                            Agendar
+                        </button>
                     </Link>
                 </div>
                 <div className="agenda-right">
@@ -29,6 +28,9 @@ function Agenda(){
                     </div>
                     <div className="agenda-boxtwo">
                         <h1> Agendamento 2 </h1>
+                    </div>
+                    <div className="agenda-boxthree">    
+                        <h1> Agendamento 3 </h1>
                     </div>
                     <div className="agenda-boxthree">    
                         <h1> Agendamento 3 </h1>

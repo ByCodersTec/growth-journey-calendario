@@ -6,20 +6,50 @@ import { BsFillPeopleFill } from "react-icons/bs";
 import { AiOutlinePhone } from "react-icons/ai";
 import { BsPen } from "react-icons/bs";
 
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 
+import api from '../../api';
 import './cadastro.css';
 
 function Cadastro(){
-    const [nome, setNome] = useState("")
-    const [email, setEmail] = useState("")
-    const [senha, setSenha] = useState("")
-    const [telefone, setTelefone] = useState("")
-    const [cpf, setCpf] = useState("")
+    const [nome, setNome] = useState('')
+    const [email, setEmail] = useState('')
+    const [senha, setSenha] = useState('')
+    const [telefone, setTelefone] = useState('')
+    const [cpf, setCpf] = useState('')
     const [show, setShow] = useState(false)
+
     const handleClick = (e) => {
         e.preventDefault()
         setShow(!show);
+    }
+
+    async function handleSubmit(){
+
+        const data = {
+            nome:nome,
+            cpf:cpf,
+            telefone:telefone,
+            email:email,
+            senha:senha  
+        }
+
+        console.log(data)
+
+        if(nome !== '' && email !== '' && senha !== '' && telefone !== '' && cpf !== ''){
+            const response = await api.post('/api/profissional', data);
+
+            if (response.status === 200){
+                window.location.href('/profissional')
+            } else {
+                alert('Erro no cadastro')
+            }
+        } else {
+            alert('Preencha todos os campos!')
+        }
+
+        
+
     }
     return(
         <div className="cadastro">
@@ -91,11 +121,11 @@ function Cadastro(){
                         </div>
                     </div>
                     <div className="cadastro-buttons">
-                        <Link to='/'>
-                            <button className="cadastro-salvar" type='submit'>
+                        {/* <Link to='/'> */}
+                            <button className="cadastro-salvar" onClick={handleSubmit}>
                                 Concluir
                             </button>
-                        </Link>
+                        {/* </Link> */}
                     </div>
                 </div>
             </form>
