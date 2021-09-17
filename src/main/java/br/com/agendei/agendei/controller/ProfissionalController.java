@@ -13,27 +13,22 @@ import org.springframework.web.servlet.ModelAndView;
 
 import br.com.agendei.agendei.models.Profissional;
 import br.com.agendei.agendei.repository.ProfissionalRepository;
-
-
-
+import br.com.agendei.agendei.service.ProfissionalService;
 
 @RestController
-@RequestMapping(value="/api/profissional")
+@RequestMapping(value = "/api/profissional")
 public class ProfissionalController {
-	
-	@Autowired
-	ProfissionalRepository repository;
-	
-	@GetMapping
-	public List<Profissional> list() throws IOException{
-		System.out.println("Listando banco de Profissionais");
-		return repository.findAll();
-	}
-	
+
+//	@GetMapping
+//	public List<Profissional> list() throws IOException {
+//		
+//	}
+
 	@PostMapping
-	public void salvar (@RequestBody Profissional profissional) {
-		System.out.println("salvando Profissional "+ profissional.getNome());
-		repository.save(profissional);
+	public void salvarCadastroProfissional(Profissional profissional) {
+		ProfissionalService cadastroProfissional = new ProfissionalService();
+		cadastroProfissional.salvarProfissional(profissional);
+
 	}
 
 }
