@@ -3,9 +3,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('img/blue1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat; background-size: cover; 
     height: 100vh;
     width: 100%;
 }
@@ -39,7 +39,7 @@
 }
 
 .agendamento-right{
-    text-align: start;
+    text-align: center;
 }
 
 .agendamento-right h1, h4{
@@ -67,14 +67,26 @@
     height: 140px;
 }
 
+.agendamento-input1 h1{
+    margin-right: 290px;
+}
+
 .agendamento-input2{
     width: 600px;
     height: 140px;
 }
 
+.agendamento-input2 h1{
+    margin-right: 310px;
+}
+
 .agendamento-input3{
     width: 600px;
     height: 140px;
+}
+
+.agendamento-input3 h1{
+    margin-right: 240px;
 }
 
 .logout{
@@ -106,8 +118,6 @@
 }
 
 .concluir{
-    position: absolute;
-    right: 525px;
     color: white;
     font-size: 15px;
     background: transparent;
@@ -117,3 +127,91 @@
     border-radius: 10px;
     box-shadow:  0px 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+@media (max-width: 480px) {
+    body {
+        background: url('img/blue1.jpg');
+    }
+
+    .agendamento-input1 h1{
+        margin-right: 280px;
+    }
+
+    .agendamento-input2 h1{
+        margin-right: 280px;
+    }
+    
+    .agendamento-input3 h1{
+        margin-right: 210px;
+    }
+
+    .agendamento-left{
+        display: none;
+    }
+
+    .agendamento, .agendamento-right, .agendamento-box{
+        border: none;
+        box-shadow: none;
+        align-items: center; 
+        overflow: visible;
+    }
+
+    .agendamento-box input, .agendamento-box div{
+        width: 100%;
+        padding: 0;
+    }
+
+    .concluir{
+        width: 100px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 800px) {
+    body {
+        background: url('img/blue1.jpg');
+    }
+
+    .agendamento-input1 h1{
+        margin-right: 370px;
+    }
+
+    .agendamento-input2 h1{
+        margin-right: 390px;
+    }
+    
+    .agendamento-input3 h1{
+        margin-right: 320px;
+    }
+
+    .agendamento, .agendamento-right, .agendamento-box{
+        border: none;
+        box-shadow: none;
+        align-items: center; 
+    }
+
+    .agendamento-box input{
+        width: 450px;
+        padding: 0;
+    }
+
+    .agendamento-box div{
+        width: 100%;
+    }
+
+    .agendamento-left{
+        display: none;
+    }
+
+    .concluir{
+        align-items: center;
+        width: 100px;
+    }
+
+}
+
+@media (min-width: 801px) {
+    body {
+	    background: url('img/blue1.jpg');
+   }
+}
+

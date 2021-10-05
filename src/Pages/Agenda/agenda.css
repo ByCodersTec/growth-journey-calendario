@@ -3,9 +3,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('img/blue1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat; background-size: cover; 
     height: 100vh;
     width: 100%;
 }
@@ -41,9 +41,6 @@
 .agenda-right{
     height: 477px;
     overflow-y: auto;
-}
-
-.agenda-right h1, h4{
     font-family: 'Roboto';
 }
 
@@ -64,6 +61,7 @@
     height: 140px;
     margin-bottom: 25px;
     margin-right: 10px;
+    position: relative;
 }
 
 .agenda-boxtwo{
@@ -100,6 +98,21 @@
     cursor: pointer;
 }
 
+.lixeira{
+    color: white;
+    border: unset;
+    background-color: unset;
+    font-size: large; 
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.lixeira:hover{
+    cursor: pointer;
+    text-shadow: -1px 0px 12px rgba(255, 255, 255, 1);
+}
+
 /* width */
 ::-webkit-scrollbar {
     padding: 10px;
@@ -117,3 +130,62 @@
   ::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.2);
   }
+
+  @media (max-width: 480px) {
+    body {
+        background: url('img/blue1.jpg');
+    }
+
+    .agenda-left{
+        width: 80%;
+        font-size: 13px;
+        position: relative;
+        left: 0px;
+    }
+
+    .agenda, .agenda-right, .agenda-box{
+        border: none;
+        box-shadow: none;
+        align-items: center; 
+        overflow: visible;
+    }
+
+    .agenda-right div{
+        font-size: 10px;
+        width: 95%;
+        position: relative;
+    }
+
+    .agenda-box{
+        width: 99%;
+        padding: 0;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    body {
+        background: url('img/blue1.jpg');
+    }
+
+
+    .agenda-box{
+        width: 80%;
+    }
+
+    .agenda-right div{
+        width: 98%;
+    }
+
+    .agenda-left {
+        align-items: center;
+        justify-content: center;
+        width: 20%;
+    }
+
+}
+
+@media (min-width: 1025px) {
+    body {
+	    background: url('img/blue1.jpg');
+   }
+}
