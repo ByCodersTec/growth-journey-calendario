@@ -7,6 +7,7 @@ import { BsFillPeopleFill } from "react-icons/bs";
 import { AiOutlinePhone } from "react-icons/ai";
 import { BsPen } from "react-icons/bs";
 
+
 // import {Link} from 'react-router-dom';
 
 import './cadastro.css';
@@ -39,13 +40,16 @@ function Cadastro(){
             'senha' : senha  
         }
 
-
-        await axios.post('https://bycoders-agendei.herokuapp.com/api/profissional', data)
-                .then((response) => {
-                    history.push('/');
-                });
-        
-        console.log(data);
+        if (nome !== '' && cpf !== '' && telefone !== '' && email !== '' && senha !== ''){
+            await axios.post('https://bycoders-agendei.herokuapp.com/api/profissional', data)
+                    .then((response) => {
+                        history.push('/');
+                    });
+            
+            console.log(data);
+        } else {
+            alert('Preencha todos os Campos!')
+        }
 
     }
 

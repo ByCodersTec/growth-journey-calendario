@@ -6,14 +6,22 @@ import {Link} from 'react-router-dom';
 
 import './agendamento.css';
 
+function formatDate(str){
+    return str.split('/').reverse().join('-');
+}
+
+function formatHour(hour){
+    return hour + ":00"
+}
+
 
 function Agendamento(){
 
     const [atividade, setAtividade] = useState('');
     const [descricao, setDescricao] = useState('');
-    // const [horaIni, setHoraIni] = useState('');
-    // const [horaFim, setHoraFim] = useState('');
-    // const [dia, setDia] = useState('');
+    const [horaIni, setHoraIni] = useState('');
+    const [horaFim, setHoraFim] = useState('');
+    const [dia, setDia] = useState('');
 
 
     const history = useHistory();
@@ -23,22 +31,25 @@ function Agendamento(){
         ev.preventDefault();
     
         const data = {
-            'id' : 1,
+            'id' : 2,
             'atividade' : atividade,
             'descricao' : descricao,
-            'codUsuario': 1,
-            'horaInicio' : '08:00:00',
-            'horaFim' : '09:00:00',
-            'dia' : '2019-03-03'
+            'codUsuario' : 2,
+            'horaInicio' : formatHour(horaIni),
+            'horaFim' : formatHour(horaFim),
+            'dia' : formatDate(dia)
         }
     
-    
-        await axios.post('https://bycoders-agendei.herokuapp.com/eventos/salvar', data)
-                .then((response) => {
-                    history.push('/agenda');
-                });
-        
-        console.log(data);
+        if (atividade !== '' && descricao !== '' && horaIni !== '' && horaFim !== '' && dia !== ''){
+            await axios.post('https://bycoders-agendei.herokuapp.com/eventos/salvar', data)
+                    .then((response) => {
+                        history.push('/agenda');
+                    });
+            
+            console.log(data);
+        } else {
+            alert("Preencha todos os Campos!")
+        }
     
     }
     return(
@@ -68,14 +79,36 @@ function Agendamento(){
                         />
                     </div>
                     <div className="agendamento-input2">
-                        <h1> Data: </h1>
+                        <h1> Dia: </h1>
                         <br/>
                         <input 
                             required
                             type="date" 
+                            value={dia}
+                            onChange={e => setDia(e.target.value)}
                         />
                     </div>
                     <div className="agendamento-input3">
+                        <h1> Horario de Fim: </h1>
+                        <br/>
+                        <input 
+                            required
+                            type="time" 
+                            value={horaFim}
+                            onChange={e => setHoraFim(e.target.value)}
+                        />
+                    </div>
+                    <div className="agendamento-input4">
+                        <h1> Horario de Inicio: </h1>
+                        <br/>
+                        <input 
+                            required
+                            type="time" 
+                            value={horaIni}
+                            onChange={e => setHoraIni(e.target.value)}
+                        />
+                    </div>
+                    <div className="agendamento-input5">
                         <h1> Descrição: </h1>
                         <br/>
                         <input 

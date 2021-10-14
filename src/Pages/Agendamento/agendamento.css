@@ -12,7 +12,7 @@
 
 .agendamento-box{
     padding: 30px;
-    width: 800px;
+    width: 700px;
     height: 500px;
     display: flex;
     text-align: center;
@@ -39,7 +39,9 @@
 }
 
 .agendamento-right{
-    text-align: center;
+    position: relative;
+    text-align: start;
+    height: 472px;
 }
 
 .agendamento-right h1, h4{
@@ -49,8 +51,6 @@
 .agendamento-right input{
     background: transparent;
     width: 370px;
-    outline-width: 0;
-    font-size: 17px;
     margin-left: 10px;
     margin-right: 20px;
     background:  transparent;
@@ -63,8 +63,10 @@
 }
 
 .agendamento-input1{
+    position: relative;
+    font-size: 10px;
     width: 600px;
-    height: 140px;
+    height: 100px;
 }
 
 .agendamento-input1 h1{
@@ -72,8 +74,9 @@
 }
 
 .agendamento-input2{
+    font-size: 10px;
     width: 600px;
-    height: 140px;
+    height: 100px;
 }
 
 .agendamento-input2 h1{
@@ -81,12 +84,35 @@
 }
 
 .agendamento-input3{
-    width: 600px;
-    height: 140px;
+    position: absolute;
+    float: right;
+    font-size: 7px;
+    width: 170px;
+    height: 80px;
+    left: 200px;
+
 }
 
-.agendamento-input3 h1{
-    margin-right: 240px;
+.agendamento-input3 input {
+    position: relative ;      
+    width: 100%;
+}
+
+.agendamento-input4 {
+    font-size: 7px;
+    width: 170px;
+    height: 80px;
+}
+
+.agendamento-input4 input {
+    position: relative ;      
+    width: 100%;
+}
+
+.agendamento-input5 {
+    font-size: 10px;
+    width: 600px;
+    height: 80px;
 }
 
 .logout{
@@ -118,6 +144,9 @@
 }
 
 .concluir{
+    position: absolute;
+    bottom: 3px;
+    right: 58%;
     color: white;
     font-size: 15px;
     background: transparent;

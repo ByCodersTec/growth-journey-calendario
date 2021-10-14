@@ -8,14 +8,17 @@ import {Link} from 'react-router-dom';
 
 import './login.css';
 
-function Login(){
-    const [nome, setNome] = useState("")
-    const [senha, setSenha] = useState("")
+function Login (){
+
+    const [email, setEmail] = useState("")
+    const [senha, setSenha] = useState("")      
     const [show, setShow] = useState(false)
+
     const handleClick = (e) => {
         e.preventDefault()
         setShow(!show);
     }
+
     return(
         <div className="login">
             <div className="login-right">
@@ -26,8 +29,8 @@ function Login(){
                     <input 
                         type="text" 
                         placeholder="Digite seu Nome"
-                        value={nome}
-                        onChange={e => setNome(e.target.value)}
+                        value={email}
+                        onChange={e => setEmail(e.target.value)}
                     />
                 </div>
 
@@ -51,30 +54,31 @@ function Login(){
                                 )}
                         </div>
                     </div>
-                    
+                        
                     <Link to='/agenda'>
                         <button className="login-entrar">
                             Entrar
                         </button>
-                    </Link>
+                    </Link>   
 
                     <h4>Não possui conta?</h4>
 
                     <Link to='/cadastro'>
                         <button className="login-cadastrese" type='submit'>
-                             Cadastre-se
+                            Cadastre-se
                         </button>
                     </Link>
-                    
+                        
                 </div>
-            <div className="login-logo">
-                <img
-                    src="https://api.freelogodesign.org/files/4af636d8356b42dcbcdd9484bc6a65dd/thumb/logo_200x200.png?v=637657716850000000" 
-                    alt="Agendei Logo"
-                />
+                <div className="login-logo">
+                    <img
+                        src="https://api.freelogodesign.org/files/4af636d8356b42dcbcdd9484bc6a65dd/thumb/logo_200x200.png?v=637657716850000000" 
+                        alt="Agendei Logo"
+                    />
             </div>
         </div>    
     )
 }
+
 
 export default Login
